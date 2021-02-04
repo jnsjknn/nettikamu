@@ -1,0 +1,98 @@
+.Username {
+  text-align: center;
+  font-weight: 700;
+}
+
+.Profile h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.Profile p {
+  font-size: 14px;
+}
+
+.Profile form {
+  padding-top: 20px;
+}
+.Selection {
+  margin-top: 10px;
+  height: 60px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Selection > div {
+  margin: 0 5px;
+  width: 30%;
+  padding: 9px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: var(--background-color);
+}
+
+.Selection > div > *:last-child {
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+.Posts {
+  margin: 0 10px;
+}
+.Post {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  padding: 10px;
+}
+
+.Text {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  margin-right: 20px;
+}
+.Text > span:nth-child(1) {
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: 5px;
+}
+
+.Text > span:nth-child(2) {
+  font-size: 14px;
+}
+
+.ActionButtons {
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.Open,
+.Delete {
+  height: 40px;
+  min-width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+}
+
+.Open {
+  margin-right: 15px;
+  background: var(--success);
+}
+
+.Delete {
+  background: var(--error);
+}

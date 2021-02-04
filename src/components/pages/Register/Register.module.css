@@ -1,0 +1,47 @@
+.Register h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.PasswordWrapper {
+  position: relative;
+}
+
+.ShowPassword {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 18px;
+  right: 5px;
+  top: 55%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 2;
+}
+
+.Gender {
+  margin: 15px 0 5px 5px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Gender > * {
+  margin: 0 5px;
+}
+
+.Privacy {
+  margin: 15px 0 10px 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Privacy > *:first-child {
+  max-width: 80%;
+  font-size: 14px;
+}

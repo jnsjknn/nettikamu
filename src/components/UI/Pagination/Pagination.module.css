@@ -1,0 +1,54 @@
+.Pagination {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.Pagination button {
+  width: 45px;
+  border: 1px solid var(--primary);
+}
+
+.Pagination button:disabled {
+  width: 45px;
+  background-color: var(--UI-color);
+  opacity: 1;
+}
+
+.PreviousDisabled,
+.NextDisabled {
+  width: 45px;
+  height: 45px;
+}
+
+.Pagination div:nth-child(2) {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  width: 120px;
+  background-color: var(--UI-color);
+  border: 1px solid var(--primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+.Pagination div.RoundLeft:nth-child(2) {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.Pagination div.RoundRight:nth-child(2) {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.Pagination button:first-child {
+  border-radius: 4px 0 0 4px;
+  border-width: 1px 0 1px 1px;
+}
+
+.Pagination button:last-child {
+  border-radius: 0 4px 4px 0;
+}

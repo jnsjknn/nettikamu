@@ -1,0 +1,18 @@
+.PrivacyPolicy {
+  padding: 0 5px;
+}
+.PrivacyPolicy h1 {
+  margin: 20px 0;
+}
+
+.PrivacyPolicy h2 {
+  margin: 15px 0;
+}
+
+.PrivacyPolicy p {
+  margin: 10px 0;
+}
+
+.Privacy a {
+  font-weight: 700;
+}

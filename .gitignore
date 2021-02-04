@@ -1,0 +1,9 @@
+*/node_modules
+/node_modules
+/build
+*.log
+.eslintcache
+*/config/default.json
+/template
+*friends_large.jpg
+yarn.lock

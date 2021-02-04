@@ -1,0 +1,89 @@
+.PostItem {
+  border-radius: 8px 8px 0 0;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.TopPart {
+  height: 70px;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--purple);
+}
+
+.GenderAge,
+.Location {
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 700;
+  min-height: 20px;
+  background-color: var(--lightest-purple);
+  color: var(--purple);
+}
+
+.Location {
+  border-radius: 0 0 8px 8px;
+  font-size: 12px;
+  margin-top: -1px;
+  background-color: var(--lightest-purple);
+}
+
+.TextPart {
+  min-height: 130px;
+  padding: 10px 10px;
+  color: var(--purple);
+  background-color: var(--lightest-purple);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.TextPart > span {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.BottomPart {
+  padding: 0 10px 10px 10px;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  color: var(--purple);
+  background-color: var(--lightest-purple);
+}
+
+.BottomPart > p {
+  padding-bottom: 10px;
+}
+
+.BottomPart > *:last-child {
+  font-size: 16px;
+}
+
+.Socials {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.Social {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.Social > span:nth-child(1) {
+  width: 100px;
+  text-align: left;
+}
+
+.Social > a,
+.Social span:nth-child(2) {
+  text-align: left;
+  min-width: 100px;
+}

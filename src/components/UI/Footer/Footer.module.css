@@ -1,0 +1,43 @@
+.FooterWrapper {
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: var(--footer-height);
+}
+.Footer {
+  display: flex;
+  flex-flow: column;
+  padding: 0 20px;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  background: var(--UI-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.Links {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Links a[target='_blank'] {
+  padding-left: 14px;
+}
+
+.Links > * {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.CopyRight {
+  font-weight: 300;
+}

@@ -1,0 +1,85 @@
+.AlertContainer {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  z-index: 999999;
+  width: 300px;
+  min-height: 20px;
+  padding: 0 15px;
+  max-height: calc(100% - 30px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.Alert {
+  padding: 15px 15px 15px 15px;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #ccc;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.2em;
+  position: relative;
+  margin-top: 15px;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.Close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-align: center;
+  line-height: 20px;
+  z-index: 2000;
+  width: 20px;
+  height: 20px;
+}
+
+.Title {
+  font-size: 1em;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+.Alert:focus,
+.Alert:hover {
+  opacity: 1;
+}
+
+.Active {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  transform: translateX(0);
+}
+.Active,
+.Leave {
+  visibility: visible;
+}
+
+.Leave {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.Info {
+  background-color: var(--info);
+}
+
+.Success {
+  background-color: var(--success);
+}
+
+.Warning {
+  background-color: var(--warning);
+}
+
+.Error {
+  background-color: var(--error);
+}

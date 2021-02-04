@@ -1,0 +1,26 @@
+{
+  "name": "nettikamu-server",
+  "version": "0.1.0",
+  "description": "Server for nettikamu",
+  "main": "server.js",
+  "scripts": {
+    "dev": "set NODE_ENV=development&&nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Joonas Jokinen",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.9",
+    "twilio": "^3.54.1"
+  }
+}

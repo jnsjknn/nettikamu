@@ -1,0 +1,99 @@
+.Index {
+  width: 100vw;
+}
+.CallToAction {
+  width: 100%;
+  background-color: var(--UI-color);
+  padding: 0 20px;
+  padding-top: 15vh;
+  overflow-x: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.CallToAction h1 {
+  font-size: 32px;
+  margin-bottom: 7vh;
+}
+
+.CallToAction p {
+  margin: 5px 0 40px 0px;
+  font-size: 12px;
+}
+
+.ImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Image {
+  width: 100%;
+  max-width: 400px;
+}
+
+.Row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Filters {
+  text-align: left;
+  padding: 5px;
+}
+.Filters h4 {
+  text-align: center;
+}
+.Filters h4:not(:only-child) {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.Row > label {
+  margin: 0 5px;
+}
+
+.Label {
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.Posts h2 {
+  text-align: left;
+  padding-left: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.AddPost {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--purple);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  animation-name: anim;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(200%);
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

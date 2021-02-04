@@ -1,0 +1,31 @@
+.Login h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* .Login h3 {
+  font-size: 24px;
+  text-align: center;
+} */
+
+.Login p {
+  font-size: 14px;
+  margin: 0 0 5px 5px;
+}
+
+.Login form {
+  padding-top: 20px;
+}
+.RememberUser {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.RememberUser > *:last-child {
+  width: 70%;
+  margin: 0;
+  font-size: 14px;
+}
