@@ -5,7 +5,7 @@ import Card from '../Card/Card';
 
 const Advertisement = () => {
   return (
-    <Card style={{ margin: '0 auto', padding: 0 }}>
+    <Card style={{ margin: '0 auto', padding: 0, height: '354px' }}>
       <p className={classes.AdNotice}>------ Mainos ------</p>
       <AdSense.Google
         client="ca-pub-8064636821608705"
