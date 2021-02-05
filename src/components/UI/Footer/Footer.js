@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Footer.module.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import pathnames from '../../../assets/data/pathnames';
 
 const Footer = () => {
@@ -8,9 +8,27 @@ const Footer = () => {
     <div className={classes.FooterWrapper}>
       <div className={classes.Footer}>
         <div className={classes.Links}>
-          <Link to={pathnames.REPORT_ISSUE}>Ilmoita ongelmasta</Link>
-          <Link to={pathnames.PRIVACY_POLICY}>Tietosuoja</Link>
-          <Link to={pathnames.COOKIE_POLICY}>Evästeet</Link>
+          <NavLink
+            exact
+            activeClassName="activeNavLink"
+            to={pathnames.REPORT_ISSUE}
+          >
+            Ilmoita ongelmasta
+          </NavLink>
+          <NavLink
+            exact
+            activeClassName="activeNavLink"
+            to={pathnames.PRIVACY_POLICY}
+          >
+            Tietosuoja
+          </NavLink>
+          <NavLink
+            exact
+            activeClassName="activeNavLink"
+            to={pathnames.COOKIE_POLICY}
+          >
+            Evästeet
+          </NavLink>
           {/*<a
             href="https://github.com/jnsjknn/nettikamu"
             target="_blank"
