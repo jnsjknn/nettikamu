@@ -23,13 +23,21 @@ To help people meet new people and make friends without having to deal with scam
 
 ### Contributing
 
-The app is in very early development stage and there is no contribution guide yet. If you want to help with the development, leave a comment in the [discussion section](https://github.com/jnsjknn/nettikamu/discussions/1).
+Nettikamu welcomes you to contribute to the project whether you're a beginner or an expert. If you want to participate in the development, leave a message in the [discussion section](https://github.com/jnsjknn/nettikamu/discussions/categories/development).
+
+If you have development ideas but don't want to or know how to participate in their development, feel free to [share your ideas](https://github.com/jnsjknn/nettikamu/discussions/categories/ideas).
+
+##### TODO
+
+- Refactor cluttered components
+- Move all inline styling to css files
+- Create a voting system for posts
 
 ### Donations
 
 Due to Finnish laws, donations are not allowed. If you want to support the development of this app, you can buy a written thank you message from the creator of this project for a price you choose:
 
-1. Send the payment for the thank you message via [![PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/jnsjknn)
+1. Send the payment for the thank you message via [PayPal](paypal.me/jnsjknn).
 2. Send the receipt to joonas@joonasjokinen.fi and you will receive your thank you message within a week.
 
 ### License
