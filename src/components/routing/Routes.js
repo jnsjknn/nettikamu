@@ -32,9 +32,7 @@ const PrivacyPolicy = React.lazy(() =>
 const CookiePolicy = React.lazy(() =>
   import('../pages/CookiePolicy/CookiePolicy')
 );
-const ReportIssue = React.lazy(() =>
-  import('../pages/ReportIssue/ReportIssue')
-);
+const Contact = React.lazy(() => import('../pages/Contact/Contact'));
 
 const Routes = () => {
   return (
@@ -59,7 +57,7 @@ const Routes = () => {
           component={PrivacyPolicy}
         />
         <Route exact path={pathnames.COOKIE_POLICY} component={CookiePolicy} />
-        <Route exact path={pathnames.REPORT_ISSUE} component={ReportIssue} />
+        <Route exact path={pathnames.CONTACT} component={Contact} />
 
         <PrivateRoute exact path={pathnames.VERIFY} component={Verify} />
         <PrivateRoute exact path={pathnames.PROFILE} component={Profile} />

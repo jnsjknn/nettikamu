@@ -8,12 +8,8 @@ const Footer = () => {
     <div className={classes.FooterWrapper}>
       <div className={classes.Footer}>
         <div className={classes.Links}>
-          <NavLink
-            exact
-            activeClassName="activeNavLink"
-            to={pathnames.REPORT_ISSUE}
-          >
-            Ilmoita ongelmasta
+          <NavLink exact activeClassName="activeNavLink" to={pathnames.CONTACT}>
+            Ota yhteyttä
           </NavLink>
           <NavLink
             exact

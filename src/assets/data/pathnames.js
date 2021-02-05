@@ -10,7 +10,7 @@ const pathnames = {
   NEW_POST: '/luo-ilmoitus',
   PRIVACY_POLICY: '/tietosuoja',
   COOKIE_POLICY: '/evasteet',
-  REPORT_ISSUE: '/ilmoita-ongelmasta'
+  CONTACT: '/ota-yhteytta'
 };
 
 export default pathnames;
