@@ -1,14 +1,5 @@
-const config = require('config');
 const axios = require('axios');
-
-let twilioSid, twilioToken;
-if (process.env.NODE_ENV !== 'development') {
-  twilioSid = process.env.TWILIO_SID;
-  twilioToken = process.env.TWILIO_TOKEN;
-} else {
-  twilioSid = config.get('twilioSid');
-  twilioToken = config.get('twilioToken');
-}
+const { twilioSid, twilioToken } = require('./vars');
 const client = require('twilio')(twilioSid, twilioToken);
 
 const sendVerificationSMS = async to => {
