@@ -7,6 +7,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
 import scrollToTop from '../../../utils/scrollToTop';
+import PropTypes from 'prop-types';
+
 const Pagination = ({ page, totalPages, setPage }) => {
   const next = () => {
     if (page < totalPages) {
@@ -52,4 +54,9 @@ const Pagination = ({ page, totalPages, setPage }) => {
   );
 };
 
+Pagination.propTypes = {
+  page: PropTypes.number,
+  totalPages: PropTypes.number,
+  setPage: PropTypes.func
+};
 export default Pagination;

@@ -78,7 +78,9 @@ const ResetPassword = ({
 ResetPassword.propTypes = {
   sendVerification: PropTypes.func.isRequired,
   resetPassword: PropTypes.func.isRequired,
-  passwordChanged: PropTypes.bool
+  passwordChanged: PropTypes.bool,
+  role: PropTypes.number,
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({

@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './Input.module.css';
+import PropTypes from 'prop-types';
 
 const Input = ({ type, onChange, onoff = true, options, ...rest }) => {
   switch (type) {
@@ -42,6 +43,13 @@ const Input = ({ type, onChange, onoff = true, options, ...rest }) => {
         />
       );
   }
+};
+
+Input.propTypes = {
+  type: PropTypes.string,
+  onChange: PropTypes.func,
+  onoff: PropTypes.bool,
+  options: PropTypes.array
 };
 
 export default Input;

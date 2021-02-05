@@ -5,6 +5,7 @@ import pathnames from '../../../assets/data/pathnames';
 import dateToTimeAgo from '../../../utils/dateToTimeAgo';
 import Card from '../Card/Card';
 import socials from '../../../assets/data/socials';
+import PropTypes from 'prop-types';
 
 const PostItem = ({
   text,
@@ -15,13 +16,14 @@ const PostItem = ({
   city,
   _id,
   full,
+  admin,
   ...rest
 }) => {
   return (
     <Card style={{ padding: 0 }}>
       <div
         className={classes.PostItem}
-        style={{ filter: rest.admin && 'hue-rotate(180deg)' }}
+        style={{ filter: admin && 'hue-rotate(180deg)' }}
       >
         <div className={classes.TopPart}>
           <div className={classes.GenderAge}>
@@ -35,7 +37,7 @@ const PostItem = ({
           </div>
         </div>
         <div className={classes.TextPart}>
-          <span style={{ fontWeight: rest.admin && '700' }}>
+          <span style={{ fontWeight: admin && '700' }}>
             {full ? text : text.slice(0, 100) + '..'}
           </span>
 
@@ -74,6 +76,17 @@ const PostItem = ({
       </div>
     </Card>
   );
+};
+
+PostItem.propTypes = {
+  text: PropTypes.string,
+  gender: PropTypes.string,
+  age: PropTypes.number,
+  region: PropTypes.string,
+  city: PropTypes.string,
+  _id: PropTypes.string,
+  full: PropTypes.bool,
+  admin: PropTypes.bool
 };
 
 export default PostItem;

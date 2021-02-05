@@ -93,7 +93,8 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
 
 CreatePost.propTypes = {
   createPost: PropTypes.func.isRequired,
-  setPostedToFalse: PropTypes.func.isRequired
+  setPostedToFalse: PropTypes.func.isRequired,
+  posted: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = state => ({

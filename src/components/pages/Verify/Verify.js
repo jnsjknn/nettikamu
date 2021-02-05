@@ -82,7 +82,8 @@ Verify.propTypes = {
   isAuthenticated: PropTypes.bool,
   role: PropTypes.number,
   sendVerification: PropTypes.func.isRequired,
-  confirmVerification: PropTypes.func.isRequired
+  confirmVerification: PropTypes.func.isRequired,
+  phoneNumberAccepted: PropTypes.bool
 };
 
 const mapStateToProps = state => ({

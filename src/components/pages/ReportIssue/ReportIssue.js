@@ -4,13 +4,13 @@ import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import { connect } from 'react-redux';
 import { sendBugReport } from '../../../actions/posts';
+import PropTypes from 'prop-types';
 
 const ReportIssue = ({ sendBugReport }) => {
   const [text, updateText] = useState('');
 
   return (
     <Card>
-      {' '}
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -41,6 +41,10 @@ const ReportIssue = ({ sendBugReport }) => {
       </form>
     </Card>
   );
+};
+
+ReportIssue.propTypes = {
+  sendBugReport: PropTypes.func
 };
 
 export default connect(null, { sendBugReport })(ReportIssue);

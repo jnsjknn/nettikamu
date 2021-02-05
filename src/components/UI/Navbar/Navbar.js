@@ -40,7 +40,8 @@ const Navbar = ({ isAuthenticated, logout }) => {
 };
 
 Navbar.propTypes = {
-  logout: PropTypes.func.isRequired
+  logout: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
