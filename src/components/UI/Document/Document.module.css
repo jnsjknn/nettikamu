@@ -1,0 +1,14 @@
+.Document {
+  padding: 0 5px;
+}
+.Document h1 {
+  margin: 20px 0;
+}
+
+.Document h2 {
+  margin: 15px 0;
+}
+
+.Document p {
+  margin: 10px 0;
+}
