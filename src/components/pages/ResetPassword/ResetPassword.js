@@ -44,6 +44,7 @@ const ResetPassword = ({
               name="phoneNumber"
               autoComplete="tel"
               required
+              placeholder="+358501234567"
               onChange={e => updatePhoneNumber(e.target.value)}
               value={phoneNumber}
             />
