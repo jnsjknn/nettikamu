@@ -26,6 +26,11 @@ const App = () => {
     });
 
     handleThemeSelection();
+    const scriptElement = document.createElement('script');
+    scriptElement.src =
+      'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+    scriptElement.setAttribute('data-ad-client', 'ca-pub-8064636821608705');
+    document.body.appendChild(scriptElement);
   });
 
   return (
