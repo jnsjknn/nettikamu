@@ -33,6 +33,7 @@ If you have development ideas but don't want to or know how to participate in th
 - Move all inline styling to css files
 - Create a voting system for posts
 - Create a layout for desktops
+- Migrate to Next.js server side rendering
 
 ### Donations
 
