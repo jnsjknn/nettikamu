@@ -39,7 +39,7 @@ const Verify = ({
   return (
     <Card>
       <form className={classes.Verify} onSubmit={submitHandler}>
-        <h3>Puhelinnumeron vahvistus</h3>
+        <h1>Puhelinnumeron vahvistus</h1>
         {!phoneNumberAccepted && (
           <>
             <label>Puhelinnumero</label>

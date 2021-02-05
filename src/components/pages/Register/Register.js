@@ -44,7 +44,7 @@ const Register = ({ match, isAuthenticated, register, history }) => {
   return (
     <Card>
       <form className={classes.Register} onSubmit={submitHandler}>
-        <h3>Rekisteröityminen</h3>
+        <h1>Rekisteröityminen</h1>
         <label htmlFor="username">Käyttäjätunnus</label>
         <Input
           id="username"

@@ -199,7 +199,7 @@ const Profile = ({
         />
       )}
       <Card>
-        <div className={classes.Username}>{user.username}</div>
+        <h1 className={classes.Username}>Profiilin {user.username} muokkaus</h1>
         <div className={classes.Selection}>
           <div
             onClick={() => setSelection('profile')}
@@ -241,7 +241,7 @@ const Profile = ({
       </Card>
       {selection === 'profile' && (
         <Card style={{ minHeight: '100px' }}>
-          <h3>Sijainti</h3>
+          <h2>Sijainti</h2>
           <form onSubmit={updateLocationHandler}>
             <label htmlFor={region}>Maakunta</label>
             <Input
@@ -264,7 +264,7 @@ const Profile = ({
             />
             <Button type="submit">Päivitä sijainti</Button>
           </form>
-          <h3 style={{ marginTop: '10px' }}>Käyttäjänimet</h3>
+          <h2 style={{ marginTop: '10px' }}>Käyttäjänimet</h2>
           <form onSubmit={updateSocialsHandler}>
             {loading && (
               <div style={{ textAlign: 'center' }}>
@@ -299,7 +299,7 @@ const Profile = ({
       )}
       {selection === 'account' && (
         <Card style={{ minHeight: '100px' }}>
-          <h3>Yksityiset tiedot</h3>
+          <h2>Yksityiset tiedot</h2>
           {loading && (
             <div style={{ textAlign: 'center' }}>
               <Spinner />
@@ -361,7 +361,7 @@ const Profile = ({
             marginBottom: Math.max(10, 150 - posts.length * 30) + 'px'
           }}
         >
-          <h3>Ilmoitukset</h3>
+          <h2>Ilmoitukset</h2>
           {loading && (
             <div style={{ textAlign: 'center' }}>
               <Spinner />

@@ -33,7 +33,7 @@ const Login = ({ login, isAuthenticated }) => {
   return (
     <Card>
       <div className={classes.Login}>
-        <h3>Kirjautuminen</h3>
+        <h1>Kirjautuminen</h1>
         <form onSubmit={e => submitHandler(e)}>
           <label htmlFor="username">Käyttäjätunnus</label>
           <Input

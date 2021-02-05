@@ -28,8 +28,8 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
 
   return (
     <Card>
-      <h3 style={{ marginLeft: '5px' }}>Uusi ilmoitus</h3>
       <form className={classes.CreatePost} onSubmit={createPostHandler}>
+        <h1 style={{ marginLeft: '5px' }}>Uusi ilmoitus</h1>
         <p>
           Kirjoita ilmoituksen teksti. Käyttäjätunnukset lisätään ilmoitukseen
           automaattisesti profiilistasi.
@@ -44,13 +44,13 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
           onChange={e => updatePostText(e.target.value)}
         />
         <div className={classes.Terms}>
-          <h4 onClick={() => toggleRulesOpen(!rulesOpen)}>
+          <h2 onClick={() => toggleRulesOpen(!rulesOpen)}>
             Säännöt{' '}
             <FontAwesomeIcon
               icon={faChevronDown}
               style={{ transform: `rotateX(${rulesOpen ? 180 : 0}deg)` }}
             />
-          </h4>
+          </h2>
           {rulesOpen && (
             <>
               <p>

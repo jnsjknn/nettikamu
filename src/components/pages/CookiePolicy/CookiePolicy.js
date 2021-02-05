@@ -9,7 +9,7 @@ const CookiePolicy = ({ history }) => {
         <i>Laadittu 1.2.2021</i>
       </p>
 
-      <h3>Evästeet tällä sivustolla</h3>
+      <h2>Evästeet tällä sivustolla</h2>
       <p>
         Eväste on pieni tekstitiedosto, joka tallennetaan käyttäjän
         tietokoneelle, kun hän vierailee sivustossa. Evästeet ovat turvallisia:
@@ -22,9 +22,7 @@ const CookiePolicy = ({ history }) => {
         tallentamiseen sekä mainonnan kohdentamiseen.
       </p>
 
-      <p>
-        <strong>Kirjautumistoiminto</strong>
-      </p>
+      <h3>Kirjautumistoiminto</h3>
       <p>
         Kirjautuessasi sisään tälle sivustolle, sivusto lähettää käyttäjänimesi
         ja salasanasi palvelimelle. Palvelin varmistaa, että kirjautumistiedot
@@ -36,9 +34,7 @@ const CookiePolicy = ({ history }) => {
         sisällön, jota yritit selata. Poletin avulla voidaan välttää jatkuva
         käyttäjätunnuksen ja salasanan pyytäminen.
       </p>
-      <p>
-        <strong>Ulkoasuasetuksen tallentaminen</strong>
-      </p>
+      <h3>Ulkoasuasetuksen tallentaminen</h3>
       <p>
         Sivuston ulkoasuun on saatavilla vaalea ja tumma teema.
         Teemamieltymyksesi tallennetaan tietokoneellesi evästeenä, jolloin
@@ -46,9 +42,7 @@ const CookiePolicy = ({ history }) => {
         kuin itse haluat, eikä asetusta tarvitse muuttaa jokaisen kirjautumisen
         yhteydessä
       </p>
-      <p>
-        <strong>Mainosten kohdentaminen</strong>
-      </p>
+      <h3>Mainosten kohdentaminen</h3>
       <p>
         Nettisivun ylläpito vaatii paljon aikaa ja osa sen toiminnallisuuksista
         kuten nettikamu.fi -verkkotunnuksen hallinta, sivuston isännöinti
@@ -69,7 +63,7 @@ const CookiePolicy = ({ history }) => {
         mukaisesti.
       </p>
 
-      <h3>Evästeiden käytön estäminen</h3>
+      <h2>Evästeiden käytön estäminen</h2>
       <p>
         Jos haluat estää evästeet, muuta selaimesi evästeasetuksia. Lisätietoja
         evästeiden hallinnasta selaimessasi on osoitteessa{' '}

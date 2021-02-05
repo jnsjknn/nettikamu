@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classes from './ResetPassword.module.css';
 import { connect } from 'react-redux';
 import Card from '../../UI/Card/Card';
 import Input from '../../UI/Input/Input';
@@ -33,7 +34,8 @@ const ResetPassword = ({
 
   return (
     <Card>
-      <form onSubmit={e => submitHandler(e)}>
+      <form className={classes.ResetPassword} onSubmit={e => submitHandler(e)}>
+        <h1>Palauta salasana</h1>
         {!smsSent && (
           <>
             <label>Puhelinnumero</label>
