@@ -37,7 +37,7 @@ If you have development ideas but don't want to or know how to participate in th
 
 Due to Finnish laws, donations are not allowed. If you want to support the development of this app, you can buy a written thank you message from the creator of this project for a price you choose:
 
-1. Send the payment for the thank you message via [PayPal](paypal.me/jnsjknn).
+1. Send the payment for the thank you message via [PayPal](https://paypal.me/jnsjknn).
 2. Send the receipt to joonas@joonasjokinen.fi and you will receive your thank you message within a week.
 
 ### License
