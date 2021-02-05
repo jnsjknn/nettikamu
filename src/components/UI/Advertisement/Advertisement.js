@@ -4,6 +4,7 @@ import AdSense from 'react-adsense';
 import Card from '../Card/Card';
 
 const Advertisement = () => {
+  return null;
   return (
     <Card style={{ padding: 0, height: '354px' }}>
       <p className={classes.AdNotice}>------ Mainos ------</p>
