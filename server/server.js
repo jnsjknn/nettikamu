@@ -19,14 +19,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use(secureConnection);
 }
 
-console.log(`TODO
-- Translate Cookie Policy
-- Optimize
-- Refactor
-- SEO
--- Fix h1-h5 tags
-`);
-
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
