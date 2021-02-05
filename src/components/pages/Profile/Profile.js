@@ -382,11 +382,8 @@ const Profile = ({
                         <span>{dateToTimeAgo(post.date)}</span>
                       </div>
                       <div className={classes.ActionButtons}>
-                        <Link>
-                          <div
-                            className={classes.Open}
-                            onClick={() => deletePost(post._id)}
-                          >
+                        <Link to={pathnames.POST.replace(':postId', post._id)}>
+                          <div className={classes.Open}>
                             <FontAwesomeIcon icon={faEye} />
                           </div>
                         </Link>
