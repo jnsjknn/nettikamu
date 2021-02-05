@@ -25,13 +25,13 @@ const Footer = () => {
           >
             Evästeet
           </NavLink>
-          {/*<a
+          <a
             href="https://github.com/jnsjknn/nettikamu"
             target="_blank"
             rel="noreferrer"
           >
             Lähdekoodi
-          </a>*/}
+          </a>
         </div>
         <div className={classes.CopyRight}>
           Nettikamu &copy; {new Date().getFullYear()}
