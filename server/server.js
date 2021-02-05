@@ -8,15 +8,14 @@ const cronJobs = require('./config/cronJobs');
 //cronJobs.startAll();
 const secureConnection = require('./middleware/secureConnection');
 connectDB();
+var expressStaticGzip = require('express-static-gzip');
 
 app.use(express.json({ extended: false }));
 
-if (process.env.NODE_ENV !== 'development') {
-  app.use(secureConnection);
-  const buildPath = path.join(__dirname, '..', 'build');
-  app.use(express.static(buildPath));
-} else {
+if (true || process.env.NODE_ENV === 'development') {
   app.use(cors());
+} else {
+  app.use(secureConnection);
 }
 
 console.log(`TODO
@@ -30,5 +29,16 @@ console.log(`TODO
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
+
+if (true || process.env.NODE_ENV === 'production') {
+  const buildPath = path.join(__dirname, '..', 'build');
+  app.use(
+    '/',
+    expressStaticGzip(buildPath, {
+      enableBrotli: true,
+      orderPreference: ['br', 'gz']
+    })
+  );
+}
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
