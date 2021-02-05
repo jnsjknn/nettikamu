@@ -2,7 +2,7 @@ const config = require('config');
 
 let twilioSid, twilioToken, mongoURI;
 
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV === 'production') {
   twilioSid = process.env.TWILIO_SID;
   twilioToken = process.env.TWILIO_TOKEN;
   mongoURI = process.env.MONGO_URI;

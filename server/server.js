@@ -12,9 +12,10 @@ var expressStaticGzip = require('express-static-gzip');
 
 app.use(express.json({ extended: false }));
 
-if (true || process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') {
   app.use(cors());
-} else {
+}
+if (process.env.NODE_ENV === 'production') {
   app.use(secureConnection);
 }
 
@@ -30,7 +31,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
 
-if (true || process.env.NODE_ENV === 'production') {
+if (['production', 'test'].includes(process.env.NODE_ENV)) {
   const buildPath = path.join(__dirname, '..', 'build');
   app.use(
     '/',

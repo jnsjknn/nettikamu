@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "set NODE_ENV=development&&nodemon server.js",
+    "startTest": "set NODE_ENV=test&&nodemon server.js",
     "start": "node server.js"
   },
   "keywords": [],

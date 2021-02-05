@@ -27,7 +27,8 @@
     "server": "cd server && npm run dev",
     "client": "react-scripts start",
     "build": "react-app-rewired build && node compressBuild && (cd server && npm install) ",
-    "start": "cd server && npm start"
+    "start": "cd server && npm start",
+    "startTest": "cd server && npm run startTest"
   },
   "repository": {
     "type": "git",
