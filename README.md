@@ -32,6 +32,7 @@ If you have development ideas but don't want to or know how to participate in th
 - Refactor cluttered components
 - Move all inline styling to css files
 - Create a voting system for posts
+- Create a layout for desktops
 
 ### Donations
 
