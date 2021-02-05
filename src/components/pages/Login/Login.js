@@ -31,7 +31,7 @@ const Login = ({ login, isAuthenticated }) => {
   }
 
   return (
-    <Card style={{ marginTop: '65px' }}>
+    <Card>
       <div className={classes.Login}>
         <h3>Kirjautuminen</h3>
         <form onSubmit={e => submitHandler(e)}>

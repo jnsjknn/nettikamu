@@ -27,7 +27,7 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
   }
 
   return (
-    <Card style={{ marginTop: '65px' }}>
+    <Card>
       <h3 style={{ marginLeft: '5px' }}>Uusi ilmoitus</h3>
       <form className={classes.CreatePost} onSubmit={createPostHandler}>
         <p>

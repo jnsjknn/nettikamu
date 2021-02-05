@@ -37,7 +37,7 @@ const Verify = ({
   };
 
   return (
-    <Card style={{ marginTop: '65px' }}>
+    <Card>
       <form className={classes.Verify} onSubmit={submitHandler}>
         <h3>Puhelinnumeron vahvistus</h3>
         {!phoneNumberAccepted && (

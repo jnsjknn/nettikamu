@@ -53,6 +53,10 @@ body.dark img {
   --footer-height: 150px;
 }
 
+#root {
+  padding-top: 65px;
+}
+
 body {
   width: 100vw;
 }

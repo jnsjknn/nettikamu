@@ -9,7 +9,7 @@ const PrivacyPolicy = ({ history, children }) => {
     scrollToTop();
   });
   return (
-    <Card style={{ marginTop: '65px' }}>
+    <Card>
       <Button onClick={() => history.goBack()}>
         Takaisin edelliselle sivulle
       </Button>

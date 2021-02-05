@@ -9,7 +9,7 @@ const ReportIssue = ({ sendBugReport }) => {
   const [text, updateText] = useState('');
 
   return (
-    <Card style={{ marginTop: '75px', padding: '10px 15px' }}>
+    <Card>
       {' '}
       <form
         onSubmit={e => {

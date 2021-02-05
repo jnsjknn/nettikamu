@@ -32,7 +32,7 @@ const ResetPassword = ({
   }
 
   return (
-    <Card style={{ marginTop: '75px' }}>
+    <Card>
       <form onSubmit={e => submitHandler(e)}>
         {!smsSent && (
           <>

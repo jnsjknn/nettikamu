@@ -198,7 +198,7 @@ const Profile = ({
           correctAnswer={user.username}
         />
       )}
-      <Card style={{ marginTop: '65px' }}>
+      <Card>
         <div className={classes.Username}>{user.username}</div>
         <div className={classes.Selection}>
           <div
@@ -240,7 +240,7 @@ const Profile = ({
         </div>
       </Card>
       {selection === 'profile' && (
-        <Card style={{ marginTop: 0, minHeight: '100px' }}>
+        <Card style={{ minHeight: '100px' }}>
           <h3>Sijainti</h3>
           <form onSubmit={updateLocationHandler}>
             <label htmlFor={region}>Maakunta</label>
@@ -298,7 +298,7 @@ const Profile = ({
         </Card>
       )}
       {selection === 'account' && (
-        <Card style={{ marginTop: 0, minHeight: '100px' }}>
+        <Card style={{ minHeight: '100px' }}>
           <h3>Yksityiset tiedot</h3>
           {loading && (
             <div style={{ textAlign: 'center' }}>
@@ -357,7 +357,6 @@ const Profile = ({
       {selection === 'posts' && (
         <Card
           style={{
-            marginTop: 0,
             minHeight: '100px',
             marginBottom: Math.max(10, 150 - posts.length * 30) + 'px'
           }}

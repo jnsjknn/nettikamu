@@ -18,12 +18,7 @@ const PostItem = ({
   ...rest
 }) => {
   return (
-    <Card
-      style={{
-        margin: full ? '65px auto 0 auto' : '0 auto',
-        padding: 0
-      }}
-    >
+    <Card style={{ padding: 0 }}>
       <div
         className={classes.PostItem}
         style={{ filter: rest.admin && 'hue-rotate(180deg)' }}

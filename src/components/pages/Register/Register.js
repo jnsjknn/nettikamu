@@ -42,7 +42,7 @@ const Register = ({ match, isAuthenticated, register, history }) => {
   };
 
   return (
-    <Card style={{ marginTop: '65px' }}>
+    <Card>
       <form className={classes.Register} onSubmit={submitHandler}>
         <h3>Rekisteröityminen</h3>
         <label htmlFor="username">Käyttäjätunnus</label>
