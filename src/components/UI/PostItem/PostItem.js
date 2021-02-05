@@ -50,15 +50,17 @@ const PostItem = ({
                   return (
                     <div className={classes.Social} key={name}>
                       <span>{name}:</span>
-                      {/*<a
-                        href={link.replace('username', rest[name])}
-                        target="_blank"
-                        rel="noreferrer"
-                        data="noicon"
-                      >
-                        {rest[name]}
-                      </a>*/}
-                      <span>{rest[name]}</span>
+                      {link && (
+                        <a
+                          href={link.replace('username', rest[name])}
+                          target="_blank"
+                          rel="noreferrer"
+                          data="noicon"
+                        >
+                          {rest[name]}
+                        </a>
+                      )}
+                      {!link && <span>{rest[name]}</span>}
                     </div>
                   );
                 }

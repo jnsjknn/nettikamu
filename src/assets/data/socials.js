@@ -1,67 +1,42 @@
 const socials = [
   {
     name: 'discord',
-    placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    placeholder: 'käyttäjätunnus'
   },
   {
     name: 'facebook',
     placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'https://www.facebook.com/username/'
   },
   {
     name: 'instagram',
     placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'https://www.instagram.com/username/'
   },
   {
     name: 'kik',
     placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'https://kik.me/username'
   },
   {
     name: 'skype',
     placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'skype:username?chat'
   },
   {
     name: 'snapchat',
     placeholder: 'käyttäjätunnus',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'https://www.snapchat.com/add/username'
   },
   {
     name: 'telegram',
-    placeholder: '+358501234567',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    placeholder: 'käyttäjätunnus',
+    link: 'https://t.me/username'
   },
   {
     name: 'whatsapp',
     placeholder: '+358501234567',
-    color: {
-      txt: '#000',
-      bg: '#fff'
-    }
+    link: 'https://api.whatsapp.com/send?phone=username'
   }
 ];
 
