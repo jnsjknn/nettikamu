@@ -161,7 +161,7 @@ router.get('/changePassword/:phoneNumber', async (req, res) => {
         .status(400)
         .json({ errors: [{ msg: 'Puhelinnumero ei kelpaa' }] });
     }
-    const response = await verificationSMS.send(phoneNumber);
+    const response = await verificationSMS.send(phone);
     res.json(response);
     res.end();
   } catch (err) {
