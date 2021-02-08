@@ -11,15 +11,15 @@ import {
   SET_POSTED_FALSE,
   LOAD_POST_SUCCESS,
   LOAD_POST_FAIL,
-  SEND_BUG_REPORT_SUCCESS,
-  SEND_BUG_REPORT_FAIL
+  SEND_MESSAGE_SUCCESS,
+  SEND_MESSAGE_FAIL
 } from './types';
 
-export const sendBugReport = text => async dispatch => {
+export const sendMessage = text => async dispatch => {
   const body = JSON.stringify({ text });
   try {
-    await api.post('/posts/bugreport', body);
-    dispatch({ type: SEND_BUG_REPORT_SUCCESS });
+    await api.post('/posts/message', body);
+    dispatch({ type: SEND_MESSAGE_SUCCESS });
     dispatch(
       setAlert({
         msg: 'Viesti lähetetty onnistuneesti!',
@@ -27,7 +27,7 @@ export const sendBugReport = text => async dispatch => {
       })
     );
   } catch (err) {
-    dispatch({ type: SEND_BUG_REPORT_FAIL });
+    dispatch({ type: SEND_MESSAGE_FAIL });
     const errors = err.response.data.errors;
     if (errors) {
       errors.forEach(error =>

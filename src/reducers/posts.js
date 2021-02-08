@@ -8,8 +8,8 @@ import {
   SET_POSTED_FALSE,
   LOAD_POST_SUCCESS,
   LOAD_POST_FAIL,
-  SEND_BUG_REPORT_SUCCESS,
-  SEND_BUG_REPORT_FAIL
+  SEND_MESSAGE_SUCCESS,
+  SEND_MESSAGE_FAIL
 } from '../actions/types';
 
 const initialState = {
@@ -55,8 +55,8 @@ const posts = (state = initialState, action) => {
     case DELETE_POST_SUCCESS:
     case DELETE_POST_FAIL:
     case LOAD_POST_FAIL:
-    case SEND_BUG_REPORT_SUCCESS:
-    case SEND_BUG_REPORT_FAIL:
+    case SEND_MESSAGE_SUCCESS:
+    case SEND_MESSAGE_FAIL:
       return {
         ...state,
         loading: false

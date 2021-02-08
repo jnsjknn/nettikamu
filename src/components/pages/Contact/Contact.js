@@ -4,10 +4,10 @@ import Card from '../../UI/Card/Card';
 import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import { connect } from 'react-redux';
-import { sendBugReport } from '../../../actions/posts';
+import { sendMessage } from '../../../actions/posts';
 import PropTypes from 'prop-types';
 
-const Contact = ({ sendBugReport }) => {
+const Contact = ({ sendMessage }) => {
   const [text, updateText] = useState('');
   const [reason, updateReason] = useState('');
 
@@ -16,7 +16,7 @@ const Contact = ({ sendBugReport }) => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          sendBugReport(text);
+          sendMessage(text);
         }}
         className={classes.Contact}
       >
@@ -68,7 +68,7 @@ const Contact = ({ sendBugReport }) => {
 };
 
 Contact.propTypes = {
-  sendBugReport: PropTypes.func
+  sendMessage: PropTypes.func
 };
 
-export default connect(null, { sendBugReport })(Contact);
+export default connect(null, { sendMessage })(Contact);
