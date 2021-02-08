@@ -211,7 +211,7 @@ const Index = ({
           <>
             <PostItem
               admin={true}
-              text="Esimerkki kirjautuneille näkyvästä julkaisusta"
+              text="Tervetuloa nettikamuun. Osa ilmoitusten tiedoista on piilotettu käyttäjiltä, jotka eivät ole kirjautuneet. Tässä näet kuitenkin esimerkin kirjautuneille näkyvästä julkaisusta"
               gender="mies"
               age={25}
               date={new Date()}
