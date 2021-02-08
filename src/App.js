@@ -20,7 +20,14 @@ const App = () => {
       setAuthToken(token);
     }
     store.dispatch(loadUser(true));
-
+    if(!localStorage.greeted) {
+      store.dispatch(setAlert({
+        msg: 'Tervetuloa nettikamuun! Sivusto on upouusi, eikä täällä valitettavasti ole montaa ilmoitusta, mutta lähetä rohkeasti oma ilmoitus, niin teen parhaani, että muut näkevät sen :) Sivuston käyttö on ilmaista',
+        type: 'Info',
+        timeout: 10000
+      }));
+      localStorage.setItem('greeted', true);
+    }
     window.addEventListener('storage', () => {
       if (!localStorage.token) store.dispatch({ type: LOGOUT });
     });
