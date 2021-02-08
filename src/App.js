@@ -4,7 +4,7 @@ import Routes from './components/routing/Routes';
 import { Provider } from 'react-redux';
 import store from './store';
 import { loadUser } from './actions/auth';
-
+import { setAlert } from './actions/alert';
 import { LOGOUT } from './actions/types';
 import setAuthToken from './utils/setAuthToken';
 import handleThemeSelection from './utils/handleThemeSelection';
