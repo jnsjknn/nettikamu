@@ -22,7 +22,7 @@ export const sendBugReport = text => async dispatch => {
     dispatch({ type: SEND_BUG_REPORT_SUCCESS });
     dispatch(
       setAlert({
-        msg: 'Kiitos ilmoituksesta! Jokaisesta ilmoituksesta on paljon apua!',
+        msg: 'Viesti lähetetty onnistuneesti!',
         type: 'Info'
       })
     );
