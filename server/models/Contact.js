@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const BugReportSchema = new mongoose.Schema({
+const ContactSchema = new mongoose.Schema({
   text: {
     type: String,
     required: true
@@ -11,4 +11,4 @@ const BugReportSchema = new mongoose.Schema({
   }
 });
 
-module.exports = BugReport = mongoose.model('bugReport', BugReportSchema);
+module.exports = Contact = mongoose.model('contact', ContactSchema);

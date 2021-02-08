@@ -8,29 +8,29 @@ const { getAge, toMongoQuery, censorSocials, sendMail } = require('../utils');
 const ROLES = require('../config/userRoles');
 const User = require('../models/User');
 const Post = require('../models/Post');
-const BugReport = require('../models/BugReport');
+const Contact = require('../models/Contact');
 
-// @route   POST api/posts/bugreport
-// @desc    Send a bug report
+// @route   POST api/posts/message
+// @desc    Send a message to moderators
 // @access  Public
 // @body    text: String
 // @params  -
 router.post(
-  '/bugreport',
-  check('text', 'Kirjoita ilmoitusteksti').isLength({ min: 1 }),
+  '/message',
+  check('text', 'Kirjoita viesti').isLength({ min: 1 }),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
     try {
-      const bugReport = new BugReport({ text: req.body.text });
+      const contact = new Contact({ text: req.body.text });
       await sendMail({
         to: infoEmail,
-        subject: `${bugReport._id}`,
+        subject: `${contact._id}`,
         text: req.body.text
       });
-      await bugReport.save();
+      await contact.save();
       res.end();
     } catch (err) {
       console.error(err);
