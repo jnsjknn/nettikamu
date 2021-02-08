@@ -8,13 +8,16 @@ const PrivacyPolicy = ({ history }) => {
     <Document history={history}>
       <h1>Tietosuojaseloste</h1>
       <p>
-        <i> Laadittu 3.2.2021</i>
+        <i>Laadittu 3.2.2021</i>
+      </p>
+      <p>
+        <i>Muokattu 8.2.2021: Kirjoitusvirhe korjattu</i>
       </p>
       <p>
         Nettikamu ("me", "sivusto") on sitoutunut suojaamaan henkilötietojasi ja
         oikeuttasi yksityisyyden suojaan. Jos sinulla herää kysyttävää tästä
-        tietosuojaselosteesta tai tavasta, jolla käsitellä henkilötietojasi, ota
-        meihin yhteyttä sähköpostitse info@nettikamu.fi.
+        tietosuojaselosteesta tai tavasta, jolla käsittelemme henkilötietojasi,
+        ota meihin yhteyttä sähköpostitse info@nettikamu.fi.
       </p>
       <p>
         Kun vierailet www.nettikamu.fi sivustolla, otamme yksityisyytesi
@@ -103,8 +106,10 @@ const PrivacyPolicy = ({ history }) => {
         sivustoltamme etsit.
       </p>
       <p>
-        Käytämme virheilmoitusten tekstiä nopeuttaaksemme sivustoltamme
-        löytyvien virheiden löytämistä ja korjaamista
+        Jos lähetät ylläpidolle viestin sivuston alalaidan linkin kautta,
+        käytämme sen tekstiä nopeuttaaksemme sivustoltamme löytyvien virheiden
+        löytämistä ja korjaamista, vastataksemme esittämiisi kysymyksiin tai
+        voidaksemme kehittää sivustoa antamasi parannusehdotuksen avulla.
       </p>
       <h2>3. Jaetaanko tietojasi sivuston ulkopuolelle?</h2>
       <p>Tietoja ei normaalitilanteessa luovuteta sivuston ulkopuolelle.</p>
