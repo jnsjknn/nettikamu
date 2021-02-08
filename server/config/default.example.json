@@ -2,5 +2,9 @@
   "mongoURI": "",
   "jwtSecret": "",
   "twilioSid": "",
-  "twilioToken": ""
+  "twilioToken": "",
+  "smtpURI": "",
+  "smtpPassword": "",
+  "infoEmail": "",
+  "formEmail": ""
 }

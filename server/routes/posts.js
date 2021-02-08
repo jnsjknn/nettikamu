@@ -1,9 +1,10 @@
+const { infoEmail } = require('../config/vars');
 const express = require('express');
 const router = express.Router();
 const auth = require('../middleware/auth');
 const confirmUserRoles = require('../middleware/confirmUserRoles');
 const { check, validationResult } = require('express-validator');
-const { getAge, toMongoQuery, censorSocials } = require('../utils');
+const { getAge, toMongoQuery, censorSocials, sendMail } = require('../utils');
 const ROLES = require('../config/userRoles');
 const User = require('../models/User');
 const Post = require('../models/Post');
@@ -24,6 +25,11 @@ router.post(
     }
     try {
       const bugReport = new BugReport({ text: req.body.text });
+      await sendMail({
+        to: infoEmail,
+        subject: `${bugReport._id}`,
+        text: req.body.text
+      });
       await bugReport.save();
       res.end();
     } catch (err) {
@@ -86,7 +92,15 @@ router.post(
         ...location
       });
       user.posts.push(post.id);
-      await Promise.all([post.save(), user.save()]);
+      await Promise.all([
+        post.save(),
+        user.save(),
+        sendMail({
+          to: infoEmail,
+          subject: 'New post',
+          html: JSON.stringify(post.toObject())
+        })
+      ]);
       res.json(post);
     } catch (err) {
       console.error(err);

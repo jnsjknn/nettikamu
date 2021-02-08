@@ -1,3 +1,6 @@
+const { smtpURI, smtpPassword, formEmail } = require('../config/vars');
+const nodemailer = require('nodemailer');
+
 const getAge = dateString => {
   const today = new Date();
   const birthDate = new Date(dateString);
@@ -58,8 +61,29 @@ const censorSocials = posts => {
   });
 };
 
+const sendMail = ({ to, subject, text, html }) => {
+  const transporter = nodemailer.createTransport({
+    host: smtpURI,
+    port: 465,
+    secure: true,
+    auth: {
+      user: formEmail,
+      pass: smtpPassword
+    }
+  });
+
+  transporter.sendMail({
+    from: formEmail,
+    to,
+    subject,
+    text,
+    html
+  });
+};
+
 module.exports = {
   getAge,
   toMongoQuery,
-  censorSocials
+  censorSocials,
+  sendMail
 };
