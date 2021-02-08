@@ -41,6 +41,7 @@
   display: inline-block;
   width: 100%;
   word-wrap: break-word;
+  padding: 0 10px;
 }
 
 .BottomPart {
@@ -72,18 +73,22 @@
 .Social {
   display: flex;
   flex-flow: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 5px 0;
+  margin: 7px 5px;
+  width: 90%;
 }
 
 .Social > span:nth-child(1) {
   width: 100px;
   text-align: left;
+  min-width: 130px;
+  max-width: 49%;
 }
 
 .Social > a,
 .Social span:nth-child(2) {
   text-align: left;
-  min-width: 100px;
+  width: 130px;
+  word-break: break-all;
 }
