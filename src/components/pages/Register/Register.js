@@ -5,7 +5,7 @@ import Input from '../../UI/Input/Input';
 import Button from '../../UI/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import pathnames from '../../../assets/data/pathnames';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
