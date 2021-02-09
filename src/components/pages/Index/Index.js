@@ -207,21 +207,23 @@ const Index = ({
             <Spinner />
           </div>
         )}
-        {!loading && !isAuthenticated && (
+        {!loading && (
           <>
-            <PostItem
-              admin={true}
-              text="Tervetuloa nettikamuun. Osa ilmoitusten tiedoista on piilotettu käyttäjiltä, jotka eivät ole kirjautuneet. Tässä näet kuitenkin esimerkin kirjautuneille näkyvästä julkaisusta"
-              gender="mies"
-              age={25}
-              date={new Date()}
-              region="Maakunta"
-              city="Kaupunki"
-              _id="null"
-              snapchat="snapTunnus"
-              instagram="igtunnus"
-              full={true}
-            />
+            {!isAuthenticated && (
+              <PostItem
+                admin={true}
+                text="Tervetuloa nettikamuun. Osa ilmoitusten tiedoista on piilotettu käyttäjiltä, jotka eivät ole kirjautuneet. Tässä näet kuitenkin esimerkin kirjautuneille näkyvästä julkaisusta"
+                gender="mies"
+                age={25}
+                date={new Date()}
+                region="Maakunta"
+                city="Kaupunki"
+                _id="null"
+                snapchat="snapTunnus"
+                instagram="igtunnus"
+                full={true}
+              />
+            )}
             {posts.map(post => (
               <PostItem key={post._id} {...post} />
             ))}
