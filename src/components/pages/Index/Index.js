@@ -218,8 +218,8 @@ const Index = ({
               region="Maakunta"
               city="Kaupunki"
               _id="null"
-              snapchat="snapchatTunnus"
-              instagram="instagramtunnus"
+              snapchat="snapTunnus"
+              instagram="igtunnus"
               full={true}
             />
             {posts.map(post => (
