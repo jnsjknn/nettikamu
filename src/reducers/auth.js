@@ -21,7 +21,9 @@ import {
   DELETE_USER_SUCCESS,
   DELETE_USER_FAIL,
   UPDATE_LOCATION_SUCCESS,
-  UPDATE_LOCATION_FAIL
+  UPDATE_LOCATION_FAIL,
+  NOTIFICATION_READ_SUCCESS,
+  NOTIFICATION_READ_FAIL
 } from '../actions/types';
 
 const initialState = {
@@ -90,6 +92,8 @@ const auth = (state = initialState, action) => {
     case DELETE_USER_FAIL:
     case UPDATE_LOCATION_SUCCESS:
     case UPDATE_LOCATION_FAIL:
+    case NOTIFICATION_READ_SUCCESS:
+    case NOTIFICATION_READ_FAIL:
     default:
       return state;
   }

@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const auth = require('../middleware/auth');
 const User = require('../models/User');
+const Notification = require('../models/Notification');
 
 let jwtSecret;
 if (process.env.NODE_ENV !== 'development') {
@@ -45,11 +46,9 @@ router.post(
         .json({ errors: [{ msg: 'Soo soo! Tätä nimimerkkiä ei sallita' }] });
     }
     if (Date.now() - new Date(dateOfBirth).getTime() < 504910816000) {
-      return res
-        .status(400)
-        .json({
-          errors: [{ msg: 'Nettikamu on tarkoitettu yli 16-vuotiaille' }]
-        });
+      return res.status(400).json({
+        errors: [{ msg: 'Nettikamu on tarkoitettu yli 16-vuotiaille' }]
+      });
     }
     try {
       let user = await User.findOne({ username });
@@ -118,7 +117,35 @@ router.get('/me', auth, async (req, res) => {
     delete user.password;
     user = user.toObject();
     user.posts = user.posts.filter(post => post.visible);
+    user.notifications = await Notification.find().sort({ date: -1 });
+
     res.json(user);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Virhe palvelimella');
+  }
+});
+
+// @route   POST api/users/notification/read
+// @desc    Mark notification as read
+// @access  Private / USER
+// @body    id: String
+// @params  -
+router.post('/notification/read', auth, async (req, res) => {
+  try {
+    let user = await User.findById(req.user.id);
+    if (!user) {
+      return res
+        .status(400)
+        .json({ errors: [{ msg: 'Käyttäjätietoja ei löytynyt' }] });
+    }
+    if (!user.seenNotifications) {
+      user.seenNotifications = [req.body.id];
+    } else {
+      user.seenNotifications.push(req.body.id);
+    }
+    await user.save();
+    res.end();
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Virhe palvelimella');

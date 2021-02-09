@@ -41,3 +41,118 @@
   line-height: 55px;
   font-size: 25px;
 }
+
+.NotificationBell {
+  position: relative;
+}
+
+.NotificationBell:hover + .NotificationNumber {
+  background: red;
+}
+
+.NotificationNumber {
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  right: 7px;
+  border-radius: 50%;
+  background: red;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  transform: none !important;
+}
+
+.Bounce {
+  animation-iteration-count: infinite;
+  animation-name: bellShake;
+  animation-duration: 20s;
+}
+
+@keyframes bellShake {
+  0%,
+  50%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  50.5% {
+    transform: scale(1.2, 0.6);
+  }
+  51.5% {
+    transform: scale(0.8, 1.1) translateY(-7px);
+  }
+  52.5% {
+    transform: scale(1) translateY(0);
+  }
+  55% {
+    transform: translateY(0);
+  }
+}
+
+.Notifications {
+  max-width: 360px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: var(--UI-color);
+  font-size: 18px;
+  z-index: 100;
+  padding: 20px;
+  min-height: 100vh;
+  width: 99vw;
+  max-width: 400px;
+}
+
+.Notifications > span {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.Notifications > h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 26px;
+}
+
+.Notification {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  margin: 20px 0;
+  width: 100%;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  padding: 20px;
+}
+
+.NotifText {
+  text-align: center;
+}
+
+.NotifDate {
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.NotifSeenBtn {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 8px;
+  background-color: var(--purple);
+}
+.Read {
+  filter: brightness(0.5);
+}

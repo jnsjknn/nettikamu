@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/posts', require('./routes/posts'));
 app.use('/api/users', require('./routes/users'));
+app.use('/api/admin', require('./routes/admin'));
 
 if (['production', 'test'].includes(process.env.NODE_ENV)) {
   const buildPath = path.join(__dirname, '..', 'build');

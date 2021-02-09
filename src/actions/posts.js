@@ -12,8 +12,21 @@ import {
   LOAD_POST_SUCCESS,
   LOAD_POST_FAIL,
   SEND_MESSAGE_SUCCESS,
-  SEND_MESSAGE_FAIL
+  SEND_MESSAGE_FAIL,
+  NOTIFICATION_READ_SUCCESS,
+  NOTIFICATION_READ_FAIL
 } from './types';
+
+export const markNotificationRead = notificationId => async dispatch => {
+  const body = JSON.stringify({ id: notificationId });
+  try {
+    await api.post('/users/notification/read', body);
+    dispatch({ type: NOTIFICATION_READ_SUCCESS });
+    dispatch(loadUser());
+  } catch (err) {
+    dispatch({ type: NOTIFICATION_READ_FAIL });
+  }
+};
 
 export const sendMessage = text => async dispatch => {
   const body = JSON.stringify({ text });
@@ -87,7 +100,6 @@ export const deletePost = postId => async dispatch => {
     dispatch(setAlert({ msg: 'Julkaisu poistettu!', type: 'Success' }));
     dispatch(loadUser());
   } catch (err) {
-    console.log(err);
     dispatch({ type: DELETE_POST_FAIL });
     dispatch(setAlert({ msg: 'Jokin meni pieleen', type: 'Error' }));
   }

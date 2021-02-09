@@ -49,6 +49,7 @@ const UserSchema = new mongoose.Schema({
       ref: 'post'
     }
   ],
+  seenNotifications: [String],
   date: {
     type: Date,
     default: Date.now

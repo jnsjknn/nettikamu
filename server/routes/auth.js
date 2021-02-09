@@ -177,7 +177,7 @@ router.get('/changePassword/:phoneNumber', async (req, res) => {
 
 // @route   POST api/auth/changePassword
 // @desc    Change user's password
-// @access  Public
+// @access  Private
 // @body    newPassword: String, phoneNumber: String, verificationCode: Number
 // @params  -
 router.post(
@@ -217,12 +217,5 @@ router.post(
     }
   }
 );
-
-(async () => {
-  await User.updateOne(
-    { phone: '+358503365054' },
-    { $set: { password: 'abcdefgh' } }
-  );
-})();
 
 module.exports = router;
