@@ -8,6 +8,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const verificationSMS = require('../config/twilio');
+const { sendMail } = require('../utils');
 
 let jwtSecret;
 if (process.env.NODE_ENV !== 'development') {
@@ -135,7 +136,11 @@ router.post('/verify', auth, async (req, res) => {
         { _id: req.user.id },
         { $set: { role: 1, phone: phoneNumber } }
       );
-
+      await sendMail({
+        to: infoEmail,
+        subject: `Uusi varmennettu käyttäjä`,
+        text: `ID: ${req.user.id}`
+      });
       res.json(user);
     } else {
       res.status(400).json({ errors: [{ msg: 'Väärä vahvistuskoodi' }] });
