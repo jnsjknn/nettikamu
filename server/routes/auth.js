@@ -9,6 +9,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const verificationSMS = require('../config/twilio');
 const { sendMail } = require('../utils');
+const { infoEmail } = require('../config/vars');
 
 let jwtSecret;
 if (process.env.NODE_ENV !== 'development') {
