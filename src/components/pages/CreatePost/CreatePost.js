@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import pathnames from '../../../assets/data/pathnames';
 
-const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
+const CreatePost = ({ createPost, posted, setPostedToFalse, role }) => {
   const [rulesOpen, toggleRulesOpen] = useState(false);
   const [rulesAccepted, toggleRulesAccepted] = useState(false);
   const [postText, updatePostText] = useState('');
@@ -24,6 +24,9 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
   if (posted) {
     setPostedToFalse();
     return <Redirect to={pathnames.PROFILE} />;
+  }
+  if (role === 0) {
+    return <Redirect to={pathnames.VERIFY} />;
   }
 
   return (
@@ -94,11 +97,13 @@ const CreatePost = ({ createPost, posted, setPostedToFalse }) => {
 CreatePost.propTypes = {
   createPost: PropTypes.func.isRequired,
   setPostedToFalse: PropTypes.func.isRequired,
-  posted: PropTypes.bool.isRequired
+  posted: PropTypes.bool.isRequired,
+  role: PropTypes.number
 };
 
 const mapStateToProps = state => ({
-  posted: state.posts.posted
+  posted: state.posts.posted,
+  role: state.auth.role
 });
 
 export default connect(mapStateToProps, { createPost, setPostedToFalse })(
