@@ -20,7 +20,7 @@ const confirmUserRoles = async (req, res, next, requiredRole) => {
 module.exports = {
   OWNER: (req, res, next) => confirmUserRoles(req, res, next, ROLES.OWNER),
   ADMIN: (req, res, next) => confirmUserRoles(req, res, next, ROLES.ADMIN),
-  MOD: (req, res, next) => confirmUserRoles(req, res, next, ROLES.MODERATOR),
+  MOD: (req, res, next) => confirmUserRoles(req, res, next, ROLES.MOD),
   MEMBER: (req, res, next) => confirmUserRoles(req, res, next, ROLES.MEMBER),
   VERIFIED: (req, res, next) =>
     confirmUserRoles(req, res, next, ROLES.VERIFIED),
