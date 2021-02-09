@@ -207,7 +207,7 @@ const Index = ({
             <Spinner />
           </div>
         )}
-        {!loading && (
+        {!loading && !isAuthenticated && (
           <>
             <PostItem
               admin={true}
