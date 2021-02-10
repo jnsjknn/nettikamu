@@ -144,7 +144,7 @@ router.post('/', async (req, res) => {
 // @access  Private / USER
 // @body    -
 // @params  postId
-router.get('/:postId', [auth, confirmUserRoles.USER], async (req, res) => {
+router.get('/:postId', async (req, res) => {
   try {
     const post = await Post.findById(req.params.postId);
     if (!post) {
