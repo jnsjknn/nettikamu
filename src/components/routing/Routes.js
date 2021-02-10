@@ -61,7 +61,7 @@ const Routes = () => {
 
         <PrivateRoute exact path={pathnames.VERIFY} component={Verify} />
         <PrivateRoute exact path={pathnames.PROFILE} component={Profile} />
-        <PrivateRoute exact path={pathnames.POST} component={Post} />
+        <Route exact path={pathnames.POST} component={Post} />
         <PrivateRoute exact path={pathnames.NEW_POST} component={CreatePost} />
       </Switch>
     </Suspense>
