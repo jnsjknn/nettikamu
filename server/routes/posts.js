@@ -118,7 +118,7 @@ router.post('/', async (req, res) => {
   try {
     const query = toMongoQuery(req.body.query);
     const page = req.body.page > 1 ? req.body.page : 1;
-    const limit = 10;
+    const limit = 20;
     const skip = (page - 1) * limit;
     const [posts, count] = await Promise.all([
       Post.find(query)
