@@ -42,7 +42,10 @@ const Index = ({
   const { ageMin, ageMax, requiredAccount, region, city, male, female } = query;
 
   useEffect(() => {
-    loadPosts({ page });
+    let gender = '';
+    if (male && !female) gender = 'mies';
+    if (!male && female) gender = 'nainen';
+    loadPosts({ page, query: { ...query, gender } });
   }, [loadPosts, page]);
 
   const filterPosts = e => {
