@@ -33,16 +33,22 @@ If you have development ideas but don't want to or know how to participate in th
 
 #### TODO
 
+**Technical**
+
 - Refactor cluttered components
 - Move all inline styling to css files
+- Migrate to Next.js server side rendering
+
+**New features**
+
 - Allow users to post about updates they'd like to see
 - Create a voting system for posts
 - Create a layout for desktops
-- Migrate to Next.js server side rendering
+- Allow users edit posts
 
 ## Donations
 
-Due to Finnish laws, donations are not allowed. If you want to support the development of this app, you can buy a written greeting from the creator of this project for a price of 5€ (US $6):
+Due to Finnish laws, donations are not allowed. If you want to support the development of this app, you can buy a written greeting from the creator of this project for a price of 5€ (US \$6):
 
 1. Send the payment for the greeting via [PayPal](https://paypal.me/jnsjknn).
 2. Send the receipt to joonas@joonasjokinen.fi and you will receive your greeting within a week.
