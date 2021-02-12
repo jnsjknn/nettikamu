@@ -235,13 +235,13 @@ const Profile = ({
             }}
           >
             <FontAwesomeIcon icon={faList} />
-            <div>Ilmoitukset</div>
+            <div>Omat ilmoitukset</div>
           </div>
         </div>
       </Card>
       {selection === 'profile' && (
         <Card style={{ minHeight: '100px' }}>
-          <h2>Sijainti</h2>
+          <h2>Profiili</h2>
           <form onSubmit={updateLocationHandler}>
             <label htmlFor={region}>Maakunta</label>
             <Input
@@ -264,7 +264,7 @@ const Profile = ({
             />
             <Button type="submit">Päivitä sijainti</Button>
           </form>
-          <h2 style={{ marginTop: '10px' }}>Käyttäjänimet</h2>
+
           <form onSubmit={updateSocialsHandler}>
             {loading && (
               <div style={{ textAlign: 'center' }}>
@@ -299,7 +299,7 @@ const Profile = ({
       )}
       {selection === 'account' && (
         <Card style={{ minHeight: '100px' }}>
-          <h2>Yksityiset tiedot</h2>
+          <h2>Tilin tiedot</h2>
           {loading && (
             <div style={{ textAlign: 'center' }}>
               <Spinner />
@@ -361,7 +361,7 @@ const Profile = ({
             marginBottom: Math.max(10, 150 - posts.length * 30) + 'px'
           }}
         >
-          <h2>Ilmoitukset</h2>
+          <h2>Omat ilmoitukset</h2>
           {loading && (
             <div style={{ textAlign: 'center' }}>
               <Spinner />
