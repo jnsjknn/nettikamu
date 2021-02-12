@@ -38,7 +38,8 @@ const PostItem = ({
         </div>
         <div className={classes.TextPart}>
           <span style={{ fontWeight: admin && '700' }}>
-            {full ? text : text.slice(0, 100) + '..'}
+            {full ? text : text.slice(0, 50)}
+            {text.length > 50 && '..'}
           </span>
 
           {full && (
