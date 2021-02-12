@@ -45,6 +45,7 @@ If you have development ideas but don't want to or know how to participate in th
 - Create a voting system for posts
 - Create a layout for desktops
 - Allow users edit posts
+- Let users select a dark or light theme
 
 ## Donations
 
