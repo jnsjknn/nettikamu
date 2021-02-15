@@ -1,10 +1,23 @@
 const { CronJob } = require('cron');
-const Post = require('../models/Post');
+const User = require('../models/User');
 
-const tick = new CronJob(
-  '* * 4 * * *',
-  () => {
-    // asd
+const date = new Date();
+const daysToDeletion = 14;
+const deletionDate = new Date(date.setDate(date.getDate() - daysToDeletion));
+
+const cleanUpUserBase = new CronJob(
+  '00 00 5 * * *',
+  async () => {
+    try {
+      await User.deleteMany({
+        role: 0,
+        date: { $lt: deletionDate }
+      });
+      console.log('Old unverified users deleted');
+    } catch (err) {
+      console.error('Unable to delete old unverified users');
+      console.error(err);
+    }
   },
   null,
   false,
@@ -12,7 +25,7 @@ const tick = new CronJob(
 );
 
 const startAll = () => {
-  tick.start();
+  cleanUpUserBase.start();
 };
 
 module.exports = { startAll };

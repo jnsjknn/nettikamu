@@ -5,7 +5,7 @@ const connectDB = require('./config/db');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const cronJobs = require('./config/cronJobs');
-//cronJobs.startAll();
+cronJobs.startAll();
 const secureConnection = require('./middleware/secureConnection');
 connectDB();
 var expressStaticGzip = require('express-static-gzip');
