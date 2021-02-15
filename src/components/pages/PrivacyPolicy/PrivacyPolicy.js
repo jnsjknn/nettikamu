@@ -14,6 +14,12 @@ const PrivacyPolicy = ({ history }) => {
         <i>Muokattu 8.2.2021: Kirjoitusvirhe korjattu</i>
       </p>
       <p>
+        <i>
+          Muokattu 15.2.2021: Kuvausta Google AdSense -palvelun tietojen
+          käsittelystä tarkennettu
+        </i>
+      </p>
+      <p>
         Nettikamu ("me", "sivusto") on sitoutunut suojaamaan henkilötietojasi ja
         oikeuttasi yksityisyyden suojaan. Jos sinulla herää kysyttävää tästä
         tietosuojaselosteesta tai tavasta, jolla käsittelemme henkilötietojasi,
@@ -55,7 +61,7 @@ const PrivacyPolicy = ({ history }) => {
       <p>
         Keräämme tietoja, jotka vapaaehtoisesti luovutat meille
         rekisteröityessäsi, täydentäessäsi käyttäjäprofiiliasi, jakaessasi
-        ilmoituksia tai lähettäessäsi viestin löytämästäsi virheestä sivustolla.
+        ilmoituksia tai lähettäessäsi viestin 'Ota yhteyttä'-lomakkeen kautta.
       </p>
       <p>
         Keräämiemme tietojen sisältö riippuu siitä, mitä tietoja päätät jakaa
@@ -63,20 +69,26 @@ const PrivacyPolicy = ({ history }) => {
         käyttäjätunnuksen, salasanan, syntymäajan, sukupuolen, puhelinnumeron
         sekä rekisteröitymisesi ajankohdan. Keräämme myös käyttäjätunnuksesi
         viestintäsovelluksiin ja asuinpaikkasi, jos päätät lisätä ne
-        käyttäjäprofiiliisi. Jos jaat ystävänhakuilmoituksia tai lähetät
-        virheilmoituksia, keräämme myös niiden tekstisisällön. Kaiken
+        käyttäjäprofiiliisi. Jos jaat ystävänhakuilmoituksia tai lähetät viestin
+        'Ota yhteyttä'-lomakkeella, keräämme myös niiden tekstisisällön. Kaiken
         sivustollemme jakamasi tiedon on oltava oikeita tietojasi ja sinun on
         ilmoitettava meille, jos kyseisiin tietoihin tulee muutoksia.
       </p>
       <p>
-        Käytämme sivustollamme Googlen AdSense palvelua, joka saattaa kerätä
-        tietojasi oman tietosuojakäytäntönsä mukaisesti.{' '}
+        Google AdSense, Google Analytics, Improve Media Oy ja muut sosiaalisen
+        median, mainosalan ja analytiikka-alan kumppanit keräävät omat tietonsa
+        sivuston käytöstäsi ja asentavat evästeensä käyttäjien koneille. Näiden
+        palveluiden evästekäytännöt löytyvät niiden sivuiltansa Pitääksemme
+        sivuston ilmaisena, käytämme sivustolla Google AdSense palvelua
+        mainosten näyttämiseen. Google ja sen kumppanit käyttävät evästeitä
+        kohdentaakseen sinulle näytettäviä mainoksia aiemmin vieralemiisi
+        sivustoihin perustuen.
         <a
           href="https://policies.google.com/technologies/partner-sites"
           target="_blank"
           rel="noreferrer"
         >
-          Lisätietoja tiedoista, joita Google saattaa kerätä
+          Lisätietoja tiedoista, joita Google ja sen kumppanit keräävät
         </a>
       </p>
       <h2>2. Kuinka käytämme keräämiämme tietoja?</h2>
@@ -106,10 +118,11 @@ const PrivacyPolicy = ({ history }) => {
         sivustoltamme etsit.
       </p>
       <p>
-        Jos lähetät ylläpidolle viestin sivuston alalaidan linkin kautta,
-        käytämme sen tekstiä nopeuttaaksemme sivustoltamme löytyvien virheiden
-        löytämistä ja korjaamista, vastataksemme esittämiisi kysymyksiin tai
-        voidaksemme kehittää sivustoa antamasi parannusehdotuksen avulla.
+        Jos lähetät ylläpidolle viestin sivuston alalaidasta löytyvän 'Ota
+        yhteyttä'-lomakkeen kautta, käytämme sen tekstiä nopeuttaaksemme
+        sivustoltamme löytyvien virheiden löytämistä ja korjaamista,
+        vastataksemme esittämiisi kysymyksiin tai voidaksemme kehittää sivustoa
+        antamasi parannusehdotuksen avulla.
       </p>
       <h2>3. Jaetaanko tietojasi sivuston ulkopuolelle?</h2>
       <p>Tietoja ei normaalitilanteessa luovuteta sivuston ulkopuolelle.</p>
@@ -119,8 +132,8 @@ const PrivacyPolicy = ({ history }) => {
         kaupallisiin tarkoituksiin.
       </p>
       <p>
-        Käytämme sivustollamme Googlen AdSense palvelua, joka saattaa käyttää
-        tietojasi oman tietosuojakäytäntönsä mukaisesti.{' '}
+        Käytämme sivustollamme Googlen AdSense palvelua, joka kerää tietojasi
+        oman tietosuojakäytäntönsä mukaisesti.{' '}
         <a
           href="https://policies.google.com/technologies/partner-sites"
           target="_blank"
@@ -143,7 +156,7 @@ const PrivacyPolicy = ({ history }) => {
         5. Käytetäänkö sivustolla evästeitä tai muita seurantateknologioita?
       </h2>
       <p>
-        Käytämme sivustolla evästeitä{' '}
+        Käytämme sivustolla omia sekä kolmansien osapuolien evästeitä{' '}
         <Link to={pathnames.COOKIE_POLICY}>evästekäytäntömme</Link> mukaisesti.
         Emme käytä muita seurantateknologioita.
       </p>
@@ -182,10 +195,22 @@ const PrivacyPolicy = ({ history }) => {
         <li>- Saada kopio sinusta kerätyistä tiedoista</li>
         <li>- Pyytää tietojesi korjausta tai poistoa</li>
         <li>- Rajoittaa tietojesi käsittelyä</li>
+        <li>- Estää mainosten kohdentaminen</li>
       </ul>
       <p>
         Voit muuttaa tai poistaa tietojasi kirjautumalla sisään sivustollemme
         tai ottamalle meihin yhteyttä alla olevilla yhteystiedoilla.
+      </p>
+      <p>
+        Voit estää mainosten Google kohdentamasta mainoksia vierailemalla{' '}
+        <a
+          href="https://www.google.com/settings/ads"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Googlen Mainosasetukset
+        </a>{' '}
+        -sivulla
       </p>
       <p>tietosuoja@nettikamu.fi</p>
       <h2>10. Teemmekö muutoksia tähän tietosuojaselosteeseen?</h2>
